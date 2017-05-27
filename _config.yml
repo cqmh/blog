@@ -1,17 +1,17 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-title: 漠然
-author: 漠然
+title: 背包
+author: 背包
 subtitle: "Nothing is impossible to a willing heart!"
-description: "十字路口,繁华街头......"
-keywords: 漠然
+description: "不忘初心，砥砺前行......"
+keywords: 背包
 url: "https://blog.cn7seven.com"
 date_format: "ordinal"
 favicon: /favicon.ico
-timezone: Asia/Shanghai
+timezone: Asia/Chongqing
 encoding: "utf-8"
-source_code: https://github.com/cqzk/cqzk.github.io
+source_code: https://github.com/cqzk/blog
 side_bar_repo_limit: 5
 
 # ---------------- #
@@ -108,11 +108,11 @@ disqus_username: cqzk
 # ---------------- #
 #      Datas       #
 # ---------------- #
-skill_software_keywords: [Java, shell, Docker,Linux]
+skill_software_keywords: [Java, shell,Docker,Linux]
 skill_mobile_app_keywords: [Java]
 #skill_windows_keywords: []
 
 # ---------------- #
 # Github metadata  #
 # ---------------- #
-repository: cqzk/cqzk.github.io
+repository: cqzk/blog
