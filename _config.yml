@@ -15,7 +15,7 @@ source_code: https://github.com/cqzk/blog
 side_bar_repo_limit: 5
 
 # Site settings
-#baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "http://blog.cn7seven.com" # the subpath of your site, e.g. /blog
 #url: "" # the name of your domain
 logo_url: svg/min/logo.svg
 
