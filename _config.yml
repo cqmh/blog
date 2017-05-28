@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # Site settings
 baseurl: "http://blog.cn7seven.com" # the subpath of your site, e.g. /blog
 #url: "" # the name of your domain
-logo_url: svg/min/logo.svg
+logo_url: favicon.ico
 
 # Testimonials
 testimonials:
