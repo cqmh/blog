@@ -81,30 +81,23 @@ layout: default
 
 <!-- Start Testimonials -->
 <div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
-    <div class="overlay-container">
-        <div class="overlay"></div>
-        <div class="container-fluid">
-            <div id="testimonial-carousel">
-                {% for post in paginator.posts %}
-                    <div class="testimonial-item">
-                        <svg class="icon icon-quote-left"><use xlink:href="#icon-quote-left"></use></svg>
-                        <blockquote>
-                            <p> BLOG </p>
-                            <footer>							    
-                                {{ post.title }}
-                                <small>{{ post.excerpt | strip_html | strip }}</small>
-								<small>{{ post.date | date: "%Y/%m/%d" }}</small>
-								<small>
-								{% for cat in post.categories %}
-								<a>{{ cat }}</a>
-								{% endfor %}
-								</small>
-                            </footer>
-                        </blockquote>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            {% for post in paginator.posts %}
+			    <blockquote>
+				    <h3>{{ post.title }}</h3>
+					<small>{{ post.excerpt | strip_html | strip }}</small>
+					<small>{{ post.date | date: "%Y/%m/%d" }}
+					{% for cat in post.categories %}
+					<a>{{ cat }}</a>
+					{% endfor %}
+					</small>
+				</blockquote>
+			{% endfor %}
+	    </div>
+        <div class="col-sm-6">
+	        <img src="img/hero.jpg" alt="...">
+	    </div>
+	</div>
 </div>
 <!-- End Testimonials -->
