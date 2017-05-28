@@ -19,6 +19,37 @@ baseurl: "http://blog.cn7seven.com" # the subpath of your site, e.g. /blog
 #url: "" # the name of your domain
 logo_url: svg/min/logo.svg
 
+# Testimonials
+testimonials:
+    testimonials_img: parallax.jpg
+
+# Map
+map:
+    zoom: 17
+    address: Von schroeders 273, Viña del mar, Chile
+    address_details: svg/min/logo.svg
+
+# Footer
+copyright: © 2017 背包 - All rights reserved
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    .gitignore
+]
+
+# Theme Settings
+analytics: 
+google_verification:
+
+
 # ---------------- #
 #      Author      #
 # ---------------- #
