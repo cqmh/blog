@@ -73,24 +73,24 @@ navs:
     label: 首页
 
   -
-    href: /categories/
+    href: /categories
     label: 分类
 
   -
-    href: /wiki/
+    href: /wiki
     label: 维基
   
 
   -
-    href: /open-source/
+    href: /open-source
     label: 开源
 
   -
-    href: /links/
-    label: 链接
+    href: /blog
+    label: 博客
 
   -
-    href: /about/
+    href: /about
     label: 关于
 
 # ---------------- #

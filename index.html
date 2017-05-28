@@ -16,8 +16,8 @@ layout: default
     <div class="container-fluid">
         
         <div class="col-sm-6 col-sm-offset-6 col-md-4 col-md-offset-8 form">
-            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>给我发消息</h3>
-            <form action="" method="post">
+            <h3><svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>Make an Appointment</h3>
+            <form action="https://getsimpleform.com/messages?form_api_token={{ site.api_token }}" method="post">
                 <div class="form-field">
                     <input name="name" type="text" placeholder="Name" required>
                 </div>
@@ -30,7 +30,7 @@ layout: default
                 <div class="form-field">
                     <textarea name="comments" placeholder="Message" required></textarea>
                 </div>
-                <input type="submit" class="btn btn-default" value="发送">
+                <input type="submit" class="btn btn-default" value="Send">
             </form>
         </div>
 
@@ -39,25 +39,65 @@ layout: default
 <!-- End Hero -->
 
 <!-- Start 3 columns -->
-<div id="about" class="about">
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-8">
-            {% for post in paginator.posts %}
-		<h3>{{ post.title }}</h3>
-		<p>{{ post.excerpt | strip_html | strip }}</p>
-		<p>
-		    {{ post.date | date: "%Y/%m/%d" }}					
-		    {% for cat in post.categories %}
-		        <a>{{ cat }}</a>
-		    {% endfor %}
-		</p>
-	    {% endfor %}
-	</div>
-        <div class="col-sm-4">
-	    <p>search</p>
-	</div>
+<div class="three-shade-col">
+    <div class="col-sm-4">
+        <svg class="icon icon-envelope-o"><use xlink:href="#icon-envelope-o"></use></svg>
+        <h3>Contact Us</h3>
+        <ul>
+            {% if site.contact.phone %}<li><strong>Phone:</strong> {{ site.contact.phone }}</li>{% endif %}
+            {% if site.contact.emergency %}<li><strong>Emergency:</strong> {{ site.contact.emergency }}</li>{% endif %}
+            {% if site.contact.email %}<li><strong>Email:</strong> {{ site.contact.email }}</li>{% endif %}
+        </ul>
     </div>
+    <div class="col-sm-4">
+        <svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>
+        <h3>Opening Hours</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Monday – Friday</td>
+                    <td>{{ site.monday_friday }}</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>{{ site.saturday }}</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>{{ site.sunday }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-sm-4">
+        <svg class="icon icon-map-marker"><use xlink:href="#icon-map-marker"></use></svg>
+        <h3>Location</h3>
+            <p>
+                {{ site.contact.address }}
+            </p>
     </div>
 </div>
 <!-- End 3 columns -->
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="row">
+        <div class="col-sm-6">
+            {% for post in paginator.posts %}
+			    <blockquote>
+				    <h3>{{ post.title }}</h3>
+					<small>{{ post.excerpt | strip_html | strip }}</small>
+					<small>{{ post.date | date: "%Y/%m/%d" }}
+					{% for cat in post.categories %}
+					<a>{{ cat }}</a>
+					{% endfor %}
+					</small>
+				</blockquote>
+			{% endfor %}
+	    </div>
+        <div class="col-sm-6">
+	        <img src="img/hero.jpg" alt="...">
+	    </div>
+	</div>
+</div>
+<!-- End Testimonials -->

@@ -1,10 +1,6 @@
 /* 3 SHADE COLUMNS
 -------------------------------------------------*/
 .three-shade-col {
-    @extend %space;
-    .media {
-        margin-bottom: $space;
-    }
     @extend %clearfix;
     #@extend %align-center;
     display: block;
