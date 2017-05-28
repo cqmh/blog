@@ -44,16 +44,14 @@ layout: default
     <div class="row">
         <div class="col-sm-8">
             {% for post in paginator.posts %}
-		<h2>{{ post.title }}</h2>
-		<blockquote>
-		<h3>{{ post.excerpt | strip_html | strip }}</h3>
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.excerpt | strip_html | strip }}</p>
 		<p>
 		    {{ post.date | date: "%Y/%m/%d" }}					
 		    {% for cat in post.categories %}
 		        <a>{{ cat }}</a>
 		    {% endfor %}
 		</p>
-		</blockquote>
 	    {% endfor %}
 	</div>
         <div class="col-sm-4">
