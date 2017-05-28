@@ -1,8 +1,12 @@
 /* 3 SHADE COLUMNS
 -------------------------------------------------*/
 .three-shade-col {
+    @extend %space;
+    .media {
+        margin-bottom: $space;
+    }
     @extend %clearfix;
-    @extend %align-center;
+    #@extend %align-center;
     display: block;
     @include breakpoint(small) {
         display: flex;
