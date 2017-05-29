@@ -43,17 +43,6 @@ layout: default
     <div class="container-fluid">
     <div class="row">
         <div class="col-sm-8">
-            {% for post in paginator.posts %}
-		<h3>{{ post.title }}</h3>
-		<p>{{ post.excerpt | strip_html | strip }}</p>
-		<p>
-		    {{ post.date | date: "%Y/%m/%d" }}					
-		    {% for cat in post.categories %}
-		        <a>{{ cat }}</a>
-		    {% endfor %}
-		</p>
-	    {% endfor %}
-
 	    <ol class="post-list">
                 {% for post in paginator.posts %}
                 <li class="post-list-item">
@@ -65,6 +54,9 @@ layout: default
                     </p>
                     <p class="post-list-meta">
                         <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    {% for cat in post.categories %}
+		        <a>{{ cat }}</a>
+		    {% endfor %}			    
                     </p>
                 </li>
                 {% endfor %}
@@ -79,42 +71,4 @@ layout: default
 </div>
 <!-- End 3 columns -->
 
-<section class="content container">
 
-    <div class="container-fluid"><div class="row">
-
-        <!-- Post List -->
-        <div class="col-md-8">
-
-            <ol class="post-list">
-                {% for post in paginator.posts %}
-                <li class="post-list-item">
-                    <h2 class="post-list-title">
-                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                    </h2>
-                    <p class="post-list-description">
-                        {{ post.excerpt | strip_html | strip }}
-                    </p>
-                    <p class="post-list-meta">
-                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                    </p>
-                </li>
-                {% endfor %}
-            </ol>
-
-            <!-- Pagination -->
-            {% include pagination.html %}
-
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-
-        </div>
-
-        <div class="col-md-4">
-            {% include sidebar-search.html %}
-            {% include sidebar-popular-repo.html %}
-        </div>
-
-    </div></div>
-
-</section>
