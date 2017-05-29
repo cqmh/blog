@@ -12,5 +12,53 @@
     }
 }
 
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+/** Post List **/
+.post-list-item {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.post-list-title a {
+    text-decoration: none;
+}
+
+.post-list-description {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.post-list-meta {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #888;
+}
+
+.post-list-meta, .post-list-meta.octicon {
+    font-size: 18px;
+}
+
+.geopattern {
+    background-size: contain; /* To fix strange behavior when zoom in/out */
+}
+
+.sidebar-title {
+    text-align: center;
+}
+
+
 
 
