@@ -8,6 +8,9 @@ menu: 维基
 permalink: /wiki/
 ---
 
+{% if site.github.public_repositories != null %}
+{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
+
 > 多看点多学点总是好的......
 
 <ul class="listing">
