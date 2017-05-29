@@ -1,15 +1,13 @@
 ---
-layout: page
+#layout: page
+layout: default
 title: Wiki
 description: 多看点多学点总是好的
 keywords: 维基, Wiki
 comments: false
 menu: 维基
-permalink: /wiki/
+permalink: /wiki
 ---
-
-{% if site.github.public_repositories != null %}
-{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
 
 > 多看点多学点总是好的......
 
