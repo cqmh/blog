@@ -38,12 +38,14 @@ layout: default
 </div>
 <!-- End Hero -->
 
-<!-- Start 3 columns -->
-<div id="about" class="about">
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-8">
-	    <ol class="post-list">
+<section class="content container">
+
+    <div class="container-fluid"><div class="row">
+
+        <!-- Post List -->
+        <div class="col-md-8">
+
+            <ol class="post-list">
                 {% for post in paginator.posts %}
                 <li class="post-list-item">
                     <h2 class="post-list-title">
@@ -54,21 +56,29 @@ layout: default
                     </p>
                     <p class="post-list-meta">
                         <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
-                    {% for cat in post.categories %}
-		        <a>{{ cat }}</a>
-		    {% endfor %}			    
+                        {% for cat in post.categories %}
+		            <a>{{ cat }}</a>
+		        {% endfor %}
                     </p>
                 </li>
                 {% endfor %}
             </ol>
-		
-	</div>
-        <div class="col-sm-4">
-	    <p>search</p>
-	</div>
-    </div>
-    </div>
-</div>
-<!-- End 3 columns -->
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+            <!-- Comments -->
+            {% include disqus-comments.html %}
+
+        </div>
+
+        <div class="col-md-4">
+            {% include sidebar-search.html %}
+            {% include sidebar-popular-repo.html %}
+        </div>
+
+    </div></div>
+
+</section>
 
 
