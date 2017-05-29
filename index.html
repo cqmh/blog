@@ -53,6 +53,23 @@ layout: default
 		    {% endfor %}
 		</p>
 	    {% endfor %}
+
+	    <ol class="post-list">
+                {% for post in paginator.posts %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+		
 	</div>
         <div class="col-sm-4">
 	    <p>search</p>
