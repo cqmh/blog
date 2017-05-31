@@ -1,5 +1,5 @@
 ---
-layout: categories
+layout: default
 title: Categories
 description: 我也不知道都有啥......
 keywords: 分类
