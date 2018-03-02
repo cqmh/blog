@@ -1,5 +1,11 @@
 ---
 layout: default
+title: Categories
+description: 我也不知道都有啥......
+keywords: 分类
+comments: false
+menu: 分类
+permalink: /abort/
 ---
 <section class="container">
 
