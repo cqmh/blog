@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Categories
+title: 关于
 description: 我也不知道都有啥......
-keywords: 分类
+keywords: 关于
 comments: false
-menu: 分类
+menu: 关于
 permalink: /abort/
 ---
 <section class="container">
