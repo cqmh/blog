@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: 关于
 description: 我也不知道都有啥......
 keywords: 关于
